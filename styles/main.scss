@@ -1,4 +1,53 @@
 @import "fonts";
 @import "colors";
 
+.card-container{
+    background-color: $primary-cream;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 24rem;
+    margin: 16px 28px;
+    
+    img{
+        width: 90%;
+        display: none;
+       
+    }
+
+    .text-container{
+        background-color: $neutral-white;
+        padding: 1.5rem;
+
+    }
+    button{
+        background-color: $primary-cyan;
+        width: 100%;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 0.5rem;
+        color: $neutral-white;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .prices{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .old-price{
+            text-decoration: line-through;
+        }
+
+        .sale-price{
+            color: $primary-cyan;
+        }
+    }
+
+   
+
+}
 
