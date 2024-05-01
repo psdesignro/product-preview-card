@@ -1,0 +1,154 @@
+
+$primary-cyan: hsl(158, 36%, 37%);
+
+$primary-cream: hsl(30, 38%, 92%);
+
+$neutral-white: hsl(100,100%,100%);
+
+$neutral-p: hsl(228, 12%, 48%);
+
+$neutral-dark:hsl(212, 21%, 14%);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+@mixin big-serif{
+    font-size: 32px;
+    font-family: Fraunces, serif;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+*{
+    margin:0; 
+   }
+
+
+body {
+    @include flex-col;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: $neutral-p;
+    line-height: 150%;
+    background-color: $primary-cream;
+    font-size: 14px;
+
+  }
+  
+  h1 {
+        color:$neutral-dark;
+        @include big-serif;
+        margin-bottom: 4px;
+        
+        
+  }
+
+  button{
+    font-size:14px;
+    font-weight: 700;
+  }
+
+  .pretitle{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color:$neutral-p;
+  }
+
+  .sale-price{
+    @include big-serif;
+  }
+
+
+.card-container {
+    @include flex-col;
+  
+    max-width: 24rem;
+    padding:  28px 16px;
+   
+}
+    
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .text-container {
+        background-color: $neutral-white;
+        padding: 1.5rem;
+        @include flex-col;
+        gap:12px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    button {
+        background-color: $primary-cyan;
+        width: 100%;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 0.5rem;
+        color: $neutral-white;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+
+        &:hover{
+            background-color: $neutral-dark;
+            cursor: pointer;
+        }
+    }
+
+    .prices {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 24px 0 20px 0;
+
+        .old-price {
+            text-decoration: line-through;
+        }
+
+        .sale-price {
+            color: $primary-cyan;
+        }
+    }
+
+    
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution { font-size: 11px; text-align: center; }
+
+
+@media screen and (min-width: 768px) {
+
+    body{
+        width: 100vw;
+    }
+
+    .card-container{
+        flex-direction: row;
+       max-width: 600px;
+
+        img{
+            flex-grow: 1;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px ;
+            max-width: 50%;
+        }
+
+        .text-container{
+            flex-grow: 1;
+            border-radius: 0 10px  10px 0;
+            max-width: 50%;
+        }
+    }
+
+
+
+}

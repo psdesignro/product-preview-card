@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap");
+* {
+  margin: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   color: hsl(228, 12%, 48%);
   line-height: 150%;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
 }
 
 h1 {
@@ -11,6 +21,7 @@ h1 {
   font-family: Fraunces, serif;
   font-weight: 700;
   line-height: 100%;
+  margin-bottom: 4px;
 }
 
 button {
@@ -20,6 +31,7 @@ button {
 
 .pretitle {
   font-size: 12px;
+  font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: hsl(228, 12%, 48%);
@@ -36,18 +48,26 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: hsl(30, 38%, 92%);
   max-width: 24rem;
+  padding: 28px 16px;
 }
-.card-container img {
+
+img {
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
-.card-container .text-container {
+
+.text-container {
   background-color: hsl(100, 100%, 100%);
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 0 0 10px 10px;
 }
-.card-container button {
+
+button {
   background-color: hsl(158, 36%, 37%);
   width: 100%;
   padding: 15px 40px;
@@ -58,14 +78,50 @@ button {
   justify-content: center;
   gap: 8px;
 }
-.card-container .prices {
+button:hover {
+  background-color: hsl(212, 21%, 14%);
+  cursor: pointer;
+}
+
+.prices {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin: 24px 0 20px 0;
 }
-.card-container .prices .old-price {
+.prices .old-price {
   text-decoration: line-through;
 }
-.card-container .prices .sale-price {
+.prices .sale-price {
   color: hsl(158, 36%, 37%);
-}/*# sourceMappingURL=main.css.map */
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100vw;
+  }
+  .card-container {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .card-container img {
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    max-width: 50%;
+  }
+  .card-container .text-container {
+    flex-grow: 1;
+    border-radius: 0 10px 10px 0;
+    max-width: 50%;
+  }
+}/*# sourceMappingURL=general.css.map */
