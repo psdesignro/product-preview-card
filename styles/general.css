@@ -108,6 +108,9 @@ button:hover {
 @media screen and (min-width: 768px) {
   body {
     width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    margin: auto;
   }
   .card-container {
     flex-direction: row;
